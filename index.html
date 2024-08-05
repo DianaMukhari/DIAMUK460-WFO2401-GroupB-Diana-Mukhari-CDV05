@@ -1,87 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Developer Portfolio">
-    <title>Diana Mukhari - Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Diana Mukhari</h1>
-        <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>As a software developer, I am deeply passionate about technology and the endless possibilities it offers to solve complex problems and create innovative solutions. With a strong foundation in computer science principles and programming languages, I am constantly seeking opportunities to expand my knowledge and skills in software development.
-
-                I thrive in environments that encourage creativity, collaboration, and continuous learning. Whether it's developing web applications, mobile apps, or working on data-driven projects, I am enthusiastic about applying my skills to real-world challenges and making a meaningful impact.
-                
-                With a growth mindset and a willingness to embrace challenges, I am excited to embark on a journey of discovery and growth as a software development student. I am eager to contribute my passion, creativity, and problem-solving skills to projects that make a difference and shape the future of technology.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diana</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Diana Mukhari</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+<!-- Mobile navigation menu with a hamburger icon -->
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Diana Mukhari</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+<!-- Profile section -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profilepic.jpg"  />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hi there👋, I'm</p>
+        <h1 class="title">Diana Mukhari</h1>
+        <p class="section__text__p2">Frontend Junior Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/diana-resume.pdf')"
+          >
+            Get my CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/diana-mukhari-477804249/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https:https://github.com/DianaMukhari'"
+          />
+        </div>
+      </div>
     </section>
+<!-- About section -->
+    <section id="about">
+      <p class="section__text__p1">I can tell you More 😊</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/pic2.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>6 Months <br />Front-end Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p><strong>CodeSpace Academy</strong><br />Web Development Bootcamp</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Got into web development after completing a 6-month coding bootcamp at CodeSpace. Gained a strong foundation in front-end technologies, including HTML for content structure, CSS and Tailwind CSS for styling and creating custom user interfaces. Acquired proficiency in JavaScript, focusing on variables, functions, and control flow to enhance interactivity. The highlight was mastering React, a robust library for creating user interfaces with a component-based approach and state management. Built a solid project portfolio demonstrating expertise in the modern web technology stack and am ready to offer innovative web solutions while furthering my skills.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+<!-- Experience section -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Front-end Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <br>
+                <div>
+                  <h3>REACT</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              </article>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+<!-- Projects section -->
     <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Meme generator App project</p>
-                <p>Technologies: HTML, CSS, JavaScript</p>
-                <a href="#">https://github.com/DianaMukhari/DIAMUK460_WFO2401_GroupB_Diana-Mukhari_DJS05</a>
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Website project</p>
-                <p>Technologies:  javascript, HTML,CSS</p>
-                <a href="#">https://github.com/DianaMukhari/DIAMUK460_WFO2401_GroupB_Diana-Mukhari_DJS06</a>
+            <h2 class="experience-sub-title project-title">Podcast App</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DianaMukhari/DIAMUK460_WFO2401_GroupB_Diana-Mukhari_DJS11.git'"
+              >
+                Github
+              </button>
             </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Bank landing page</p>
-                <p>Technologies:  javascript, HTML,CSS</p>
-                <a href="#">https://github.com/DianaMukhari/DIAMUK460_WFO2401_GroupB_Diana-Mukhari_DJS04</a>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
             </div>
-            <div class="project">
-                <h3>Project 4</h3>
-                <p>Counter App</p>
-                <p>Technologies: javascript, HTML,CSS</p>
-                <a href="#">https://github.com/DianaMukhari/DIAMUK460_WFO2401_GroupB_Diana-Mukhari_DJS03</a>
+            <h2 class="experience-sub-title project-title">Van Hiring App</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DianaMukhari/DIAMUK460_WFO2401_GroupB_Diana-Mukhari_DJS08.git'"
+              >
+                Github
+              </button>
             </div>
-
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Cart Management App</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/dianamukhari_WFO2401_GroupB_B_SDF07'"
+              >
+                Github
+              </button>
+              </button>
+              
+              </div>
+            </div>
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img
+                    src="./assets/project-4.png"
+                    alt="Project 1"
+                    class="project-img"
+                  />
+                </div>
+                <h2 class="experience-sub-title project-title">Cache Bank landing page</h2>
+                <div class="btn-container">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://github.com/DianaMukhari/SDF11-DIAMUK460-WFO2401-B.git'"
+                  >
+                    Github
+                  </button>
+                </div>
+            
+          </div>
         </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </section>
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
+<!-- Contact section -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:mclintonsa@gmail.com">mukharidiana@gmail.com</a></p>
         </div>
-    </section>
-    
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: dianamukhari@gmail.com</p>
-            <p>Phone: 0769441875</p>
-            <a href="#">https:in.com/dianamukhari</a>
-            <p> </p>
-            <a href="#">https://github.com/DianaMukhari</a>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/diana-mukhari-477804249/">LinkedIn</a></p>
         </div>
+      </div>
     </section>
-        <footer>
-        <p>&copy; 2024 Diana Mukhari</p>
+<!-- Footer section -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Diana Mukhari. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
